@@ -25,11 +25,11 @@ sprintf(s, "################\n# E. Explore \n# Q. Quit\n################\n");
 if (write(1, s, strlen(s)) < 0) perror("Error writting the menu");
 scanf(" %c", &choice);
  
-
-switch (choice) {
-    case 'Q':
+// Comment the code:
+switch (choice) { 
+    case 'Q': 
     endFlag=0;
-    break;
+    break; 
     case 'E':
     sprintf(s, "%s", KMAG, KNRM);
     if (write(1, s, strlen(s)) < 0) perror("Error writting colour KMAG");

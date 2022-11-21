@@ -25,14 +25,14 @@ void throw_pokeball_action(){
         }
     }
 
-    if(option==7){
+    if(option==7){ // 
         sprintf(msg,"Pokemon [%d] ha escapat, per tant acaba amb exit(%d) i ho notifica al seu pare...\n", getpid(), PokemonEscaped);
         logger("DEBUG", msg);
         exit(PokemonEscaped);
     } else{
         sprintf(msg,"Pokemon [%d] no capturat... s'atura i ho notifica al seu pare...\n", getpid());
         logger("DEBUG", msg);
-        raise(SIGSTOP);
+        raise(SIGSTOP); //
     }   
 }
 
